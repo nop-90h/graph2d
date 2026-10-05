@@ -1,0 +1,52 @@
+{
+  "version": 3,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 21,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "desktop-windows",
+      "displayName": "Windows x64 (MSVC)",
+      "binaryDir": "${sourceDir}/out/build/desktop-windows",
+      "generator": "Ninja Multi-Config",
+      "architecture": {
+        "value": "x64",
+        "strategy": "external"
+      },
+      "cacheVariables": {
+        "VCPKG_MANIFEST_MODE": "ON"
+      }
+    },
+    {
+      "name": "emscripten-wasm",
+      "displayName": "Emscripten (WebAssembly)",
+      "binaryDir": "${sourceDir}/out/build/emscripten-wasm",
+      "generator": "Ninja Multi-Config",
+      "toolchainFile": "${sourceDir}/emsdk/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake"
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "Windows-Debug",
+      "configurePreset": "desktop-windows",
+      "configuration": "Debug"
+    },
+    {
+      "name": "Windows-Release",
+      "configurePreset": "desktop-windows",
+      "configuration": "Release"
+    },
+    {
+      "name": "WebAssembly-Debug",
+      "configurePreset": "emscripten-wasm",
+      "configuration": "Debug"
+    },
+    {
+      "name": "WebAssembly-Release",
+      "configurePreset": "emscripten-wasm",
+      "configuration": "Release"
+    }
+  ]
+}

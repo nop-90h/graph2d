@@ -1,0 +1,277 @@
+{
+  "resources": [
+    "chars/speach.mp3"
+  ],
+  "spritemap": {
+    "intro_00": {
+      "start": 0,
+      "end": 12.831927437641724,
+      "loop": false
+    },
+    "intro_01": {
+      "start": 14,
+      "end": 27.232585034013603,
+      "loop": false
+    },
+    "intro_02": {
+      "start": 29,
+      "end": 44.371473922902496,
+      "loop": false
+    },
+    "intro_03": {
+      "start": 46,
+      "end": 65.86734693877551,
+      "loop": false
+    },
+    "intro_04": {
+      "start": 67,
+      "end": 83.08,
+      "loop": false
+    },
+    "intro_05": {
+      "start": 85,
+      "end": 130.67367346938775,
+      "loop": false
+    },
+    "intro_06": {
+      "start": 132,
+      "end": 171.76909297052154,
+      "loop": false
+    },
+    "intro_07": {
+      "start": 173,
+      "end": 211.3419501133787,
+      "loop": false
+    },
+    "intro_08": {
+      "start": 213,
+      "end": 228.72244897959183,
+      "loop": false
+    },
+    "novel_00": {
+      "start": 230,
+      "end": 251.71308390022676,
+      "loop": false
+    },
+    "novel_01": {
+      "start": 253,
+      "end": 277.1160090702948,
+      "loop": false
+    },
+    "novel_02": {
+      "start": 279,
+      "end": 329.096485260771,
+      "loop": false
+    },
+    "novel_03": {
+      "start": 331,
+      "end": 364.55965986394557,
+      "loop": false
+    },
+    "novel_04": {
+      "start": 366,
+      "end": 399.67015873015873,
+      "loop": false
+    },
+    "novel_05": {
+      "start": 401,
+      "end": 432.04362811791384,
+      "loop": false
+    },
+    "novel_06": {
+      "start": 434,
+      "end": 490.4943764172336,
+      "loop": false
+    },
+    "novel_07": {
+      "start": 492,
+      "end": 521.3371882086168,
+      "loop": false
+    },
+    "novel_08": {
+      "start": 523,
+      "end": 537.0976870748299,
+      "loop": false
+    },
+    "novel_09": {
+      "start": 539,
+      "end": 587.3694784580499,
+      "loop": false
+    },
+    "novel_10": {
+      "start": 589,
+      "end": 628.0919274376417,
+      "loop": false
+    },
+    "novel_11": {
+      "start": 630,
+      "end": 639.0668480725624,
+      "loop": false
+    },
+    "novel_12": {
+      "start": 641,
+      "end": 660.325918367347,
+      "loop": false
+    },
+    "novel_13": {
+      "start": 662,
+      "end": 679.5166666666667,
+      "loop": false
+    },
+    "novel_14": {
+      "start": 681,
+      "end": 692.391768707483,
+      "loop": false
+    },
+    "novel_15": {
+      "start": 694,
+      "end": 701.0369387755102,
+      "loop": false
+    },
+    "novel_16": {
+      "start": 703,
+      "end": 711.5380498866214,
+      "loop": false
+    },
+    "novel_17": {
+      "start": 713,
+      "end": 723.0451473922902,
+      "loop": false
+    },
+    "novel_18": {
+      "start": 725,
+      "end": 744.952925170068,
+      "loop": false
+    },
+    "novel_19": {
+      "start": 746,
+      "end": 773.6362131519274,
+      "loop": false
+    },
+    "novel_20": {
+      "start": 775,
+      "end": 797.8767120181406,
+      "loop": false
+    },
+    "novel_21": {
+      "start": 799,
+      "end": 846.6121768707483,
+      "loop": false
+    },
+    "novel_22": {
+      "start": 848,
+      "end": 904.1414285714286,
+      "loop": false
+    },
+    "novel_23": {
+      "start": 906,
+      "end": 915.7000453514739,
+      "loop": false
+    },
+    "novel_24": {
+      "start": 917,
+      "end": 957.9529705215419,
+      "loop": false
+    },
+    "novel_25": {
+      "start": 959,
+      "end": 992.3588888888889,
+      "loop": false
+    },
+    "novel_26": {
+      "start": 994,
+      "end": 1011.2215873015873,
+      "loop": false
+    },
+    "novel_27": {
+      "start": 1013,
+      "end": 1049.8272562358277,
+      "loop": false
+    },
+    "novel_28": {
+      "start": 1051,
+      "end": 1080.1324716553288,
+      "loop": false
+    },
+    "novel_29": {
+      "start": 1082,
+      "end": 1144.9084353741496,
+      "loop": false
+    },
+    "novel_30": {
+      "start": 1146,
+      "end": 1171.9039229024943,
+      "loop": false
+    },
+    "novel_31": {
+      "start": 1173,
+      "end": 1188.3814739229024,
+      "loop": false
+    },
+    "novel_32": {
+      "start": 1190,
+      "end": 1238.5885941043084,
+      "loop": false
+    },
+    "novel_33": {
+      "start": 1240,
+      "end": 1286.8956462585033,
+      "loop": false
+    },
+    "novel_34": {
+      "start": 1288,
+      "end": 1311.5809297052153,
+      "loop": false
+    },
+    "novel_35": {
+      "start": 1313,
+      "end": 1335.04,
+      "loop": false
+    },
+    "novel_36": {
+      "start": 1337,
+      "end": 1362.5604761904763,
+      "loop": false
+    },
+    "novel_37": {
+      "start": 1364,
+      "end": 1398.5713832199547,
+      "loop": false
+    },
+    "novel_38": {
+      "start": 1400,
+      "end": 1444.3173922902495,
+      "loop": false
+    },
+    "novel_39": {
+      "start": 1446,
+      "end": 1506.7243537414965,
+      "loop": false
+    },
+    "novel_40": {
+      "start": 1508,
+      "end": 1545.7396825396825,
+      "loop": false
+    },
+    "novel_41": {
+      "start": 1547,
+      "end": 1596.5078911564626,
+      "loop": false
+    },
+    "novel_42": {
+      "start": 1598,
+      "end": 1605.8418820861677,
+      "loop": false
+    },
+    "novel_43": {
+      "start": 1607,
+      "end": 1621.647006802721,
+      "loop": false
+    },
+    "novel_44": {
+      "start": 1623,
+      "end": 1640.8173015873017,
+      "loop": false
+    }
+  }
+}

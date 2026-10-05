@@ -1,0 +1,90 @@
+/* ============================================================
+   styles.css — общая таблица стилей демо-страниц
+   (volume.html / postprocess.html / page0.html / page1.html)
+
+   Загрузка (один раз при старте, до или после парсинга страниц —
+   parseCSS пересоберёт атрибуты всех корней):
+
+       HTMLDom::getInstance()->parseCSSFromFile(szStylesFilePath);
+
+   Каскад: класс, объявленный позже, побеждает при совпадении
+   свойств. Явные атрибуты тега всегда сильнее классовых — поэтому
+   appeardelay / min / max / step / value / checked / id остаются
+   инлайн. Работает мультикласс: class="btn-cyan vol-btn".
+   ============================================================ */
+
+/* ---------- общее ---------- */
+.hr  { color: #3A2A1033; thickness: 2; margin: 8; }
+.tbl { padding: 8; border: 0; grid: none; cellspacing: 2; }
+
+/* fx-стили для «тегов» в заголовках демо-страниц */
+.fx-silverwave { fx: silverwave; }
+.fx-ishimmer   { fx: ishimmer; }
+.fx-wave       { fx: wave; }
+
+/* ---------- volume.html ---------- */
+.vol-panel { src: UI/nineslicedemo4; a: 127; b: 127; c: 127; d: 127; padding: 90; width: 960; }
+.vol-title { size: 35; color: #FDA4AF; shadow: 1; shadowcolor: #FFFFFFFF; fx: lava; appear: rise; }
+.vol-label { size: 30; color: #93C5FD; shadow: 1; shadowcolor: #FFFFFFAA; appear: rise; }
+.vol-value { size: 30; color: #86EFAC; shadow: 1; shadowcolor: #FFFFFFAA; appear: pop; }
+.vol-slider { width: 420; height: 30; min: 0; max: 1; step: 0.01;
+              tracksrc: UI/slider_empty; tracka: 10; trackb: 10;
+              fill: true; fillsrc: UI/slider_full; filltype: three; filla: 10; fillb: 10;
+              gripsrc: UI/slider_grip; gripwidth: 26; gripheight: 26;
+              hovercolor: #FFE9A0FF; pressedcolor: #FFC040FF; cursor: hand; }
+.vol-btn-text { size: 30; color: #FDA4AF; shadow: 1; shadowcolor: #000000FF; dur: 1.25; }
+
+/* ---------- postprocess.html ---------- */
+.pp-head       { padding-top: 55; padding-left: 15; }
+.pp-head-title { size: 45; color: #5A3600; shadow: 1; shadowcolor: #FFE9A0CC; fx: lava; appear: comet; }
+.pp-sec        { src: UI/nineslicedemo3; a: 82; b: 82; c: 82; d: 82; padding: 50; width: 960; padding-top: 60; }
+.pp-sec-title  { size: 35; color: #171310; shadow: 1; shadowcolor: #FFFFFFFF; fx: ishimmer; appear: rise; }
+.pp-chk        { srcu: UI/checkbox_unchecked; srcc: UI/checkbox_checked; width: 28; height: 28;
+                 hovercolor: #FFFFFF33; pressedcolor: #00000044; checkfade: 0.12; }
+.pp-chk-label  { size: 30; color: #2A2118; shadow: 1; shadowcolor: #FFFFFFAA; appear: rise; }
+.pp-label      { size: 30; color: #3E3226; shadow: 1; shadowcolor: #FFFFFFAA; appear: rise; }
+.pp-value      { size: 30; color: #0E5A63; shadow: 1; shadowcolor: #FFFFFFAA; appear: pop; }
+.pp-slider     { width: 320; height: 30;
+                 tracksrc: UI/slider_empty; tracka: 10; trackb: 10;
+                 fill: true; fillsrc: UI/slider_full; filltype: three; filla: 10; fillb: 10;
+                 gripsrc: UI/slider_grip; gripwidth: 26; gripheight: 26;
+                 hovercolor: #FFE9A0FF; pressedcolor: #FFC040FF; cursor: hand; }
+.pp-reset-text { size: 34; color: #08272B; shadow: 1; shadowcolor: #FFFFFF66; fx: lava; appear: pop; }
+
+/* ---------- общий трёхслайс-заголовок (page0 + postprocess) ---------- */
+.three-winged { src: UI/threeSliceWinged; orient: horiz; b: 260; mirror: right; }
+
+/* ---------- page0.html ---------- */
+.p0-tag52     { size: 52; color: #FF2222; shadow: 2; shadowcolor: #220000FF; fxdelay: 5.0; }
+.p0-nine      { src: UI/nineslicedemo1; a: 45; b: 45; c: 45; d: 45; padding: 60; width:800;}
+.p0-nine-text { color: #000000FF; size: 44; }
+.p0-combo     { height: 84; src: UI/combobox_frame; hoversrc: UI/combobox_frame_h; pressedsrc: UI/combobox_frame_p;
+                a: 31; b: 31; c: 32; d: 32;
+                iconsrc: UI/combobox_dropbtn; icongap: 20;
+                popupwidth: 400; popuppad: 32; itempad: 30;
+                popuphoversrc: UI/combobox_item_h; popuphovercolor: #fff;
+                popuprowa: 40; popuprowb: 40; popuprowc: 40; popuprowd: 40; }
+.p0-combo-font { color: #000000FF; }
+.p0-btn-text  { fx: lava; }
+.p0-spine     { anim: idle; loop: 1; delay: 0.35; width: 300; height: 500; keepaspect: 1; }
+.p0-chk       { srcu: UI/checkbox_unchecked; srcc: UI/checkbox_checked; width: 24; height: 24;
+                hovercolor: #FFFFFF33; pressedcolor: #00000044; hoverfade: 0.15; pressedfade: 0.07; }
+.p0-link      { hovercolor: #AAAAFF; pressedcolor: #FFAAAA; }
+.p0-tbl-spine { padding: 10; border: 0; valign: bottom; maxwidth: 500; }
+.p0-tbl-chars { padding: 15; border: 2; bordercolor: #555; grid: all; gridwidth: 1; gridcolor: #444; }
+.p0-th        { color: #FF4422FF; }
+.p0-name      { fx: candle; fxdelay: 2; }
+
+/* ---------- page1.html ---------- */
+.p1-tag50          { size: 50; color: #FF2222; shadow: 2; shadowcolor: #220000FF; fxdelay: 5.0; }
+.p1-tbl-cards      { padding: 10; grid: vh; gridwidth: 1; }
+.p1-card           { idledur: 4; idledelay: 1; }
+.p1-tbl-fmt        { border: 1; bordercolor: #00000088; gridcolor: #00000055; gridwidth: 1; grid: all; padding: 20; }
+.strike-fancy      { color: #ff3355; thickness: 3; }
+.uline-important   { color: #00ffcc; thickness: 2; }
+
+/* ---------- общие кнопки ---------- */
+.btn-cyan { src: UI/slicedCyanBtn_normal; hover: UI/slicedCyanBtn_hl; pressed: UI/slicedCyanBtn_normal;
+            a: 20; b: 20; c: 20; d: 20; }
+.vol-btn { width: 360; padding: 30; }
+.p0-btn  { padding-left: 20; padding-right: 20; }

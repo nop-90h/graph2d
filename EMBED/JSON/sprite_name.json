@@ -1,0 +1,317 @@
+{
+  "resources": [
+    "chars/sprite_name.mp3"
+  ],
+  "spritemap": {
+    "angel_hit": {
+      "start": 0,
+      "end": 0.4308390022675737,
+      "loop": false
+    },
+    "angel_ulta": {
+      "start": 2,
+      "end": 2.978888888888889,
+      "loop": false
+    },
+    "aqualia_ulta": {
+      "start": 4,
+      "end": 5.92,
+      "loop": false
+    },
+    "axe_whoosh": {
+      "start": 7,
+      "end": 7.695986394557823,
+      "loop": false
+    },
+    "axe03": {
+      "start": 9,
+      "end": 9.48,
+      "loop": false
+    },
+    "axe04": {
+      "start": 11,
+      "end": 11.456009070294785,
+      "loop": false
+    },
+    "axe05": {
+      "start": 13,
+      "end": 13.96,
+      "loop": false
+    },
+    "axe06": {
+      "start": 15,
+      "end": 15.43201814058957,
+      "loop": false
+    },
+    "bear_ulta": {
+      "start": 17,
+      "end": 21.272290249433105,
+      "loop": false
+    },
+    "buff": {
+      "start": 23,
+      "end": 27.536009070294785,
+      "loop": false
+    },
+    "buff2": {
+      "start": 29,
+      "end": 30.968004535147394,
+      "loop": false
+    },
+    "buff3": {
+      "start": 32,
+      "end": 33.34401360544218,
+      "loop": false
+    },
+    "cleric_a": {
+      "start": 35,
+      "end": 38.74401360544218,
+      "loop": false
+    },
+    "cleric_ulta": {
+      "start": 40,
+      "end": 40.95297052154195,
+      "loop": false
+    },
+    "dark": {
+      "start": 42,
+      "end": 80.42612244897958,
+      "loop": false
+    },
+    "debuff": {
+      "start": 82,
+      "end": 82.8042403628118,
+      "loop": false
+    },
+    "debuff01": {
+      "start": 84,
+      "end": 86.04,
+      "loop": false
+    },
+    "debuff02": {
+      "start": 88,
+      "end": 89.36800453514739,
+      "loop": false
+    },
+    "debuff03": {
+      "start": 91,
+      "end": 96.01600907029479,
+      "loop": false
+    },
+    "debuff04": {
+      "start": 98,
+      "end": 102.1280045351474,
+      "loop": false
+    },
+    "debuff05": {
+      "start": 104,
+      "end": 106.23201814058957,
+      "loop": false
+    },
+    "demon_cast": {
+      "start": 108,
+      "end": 115.24800453514739,
+      "loop": false
+    },
+    "devil_ulta": {
+      "start": 117,
+      "end": 118.36800453514739,
+      "loop": false
+    },
+    "dragon_roar": {
+      "start": 120,
+      "end": 125.22448979591837,
+      "loop": false
+    },
+    "elf_ulta": {
+      "start": 127,
+      "end": 127.84,
+      "loop": false
+    },
+    "fairy_b": {
+      "start": 129,
+      "end": 130.58401360544218,
+      "loop": false
+    },
+    "fairy_ulta_hit": {
+      "start": 132,
+      "end": 133.94401360544217,
+      "loop": false
+    },
+    "fairy_ulta": {
+      "start": 135,
+      "end": 136.46401360544218,
+      "loop": false
+    },
+    "fatal_a": {
+      "start": 138,
+      "end": 141.4080045351474,
+      "loop": false
+    },
+    "fatal_ulta": {
+      "start": 143,
+      "end": 145.59201814058957,
+      "loop": false
+    },
+    "fireball01": {
+      "start": 147,
+      "end": 148.3680045351474,
+      "loop": false
+    },
+    "fireball02": {
+      "start": 150,
+      "end": 152.37600907029477,
+      "loop": false
+    },
+    "gunshot": {
+      "start": 154,
+      "end": 156.47201814058957,
+      "loop": false
+    },
+    "heal": {
+      "start": 158,
+      "end": 160.90401360544217,
+      "loop": false
+    },
+    "hit01.mp3": {
+      "start": 162,
+      "end": 163.04596371882087,
+      "loop": false
+    },
+    "hit02.mp3": {
+      "start": 165,
+      "end": 166.17657596371882,
+      "loop": false
+    },
+    "hit03.mp3": {
+      "start": 168,
+      "end": 169.07208616780045,
+      "loop": false
+    },
+    "hit04.mp3": {
+      "start": 171,
+      "end": 172.15045351473924,
+      "loop": false
+    },
+    "hit05.mp3": {
+      "start": 174,
+      "end": 175.38555555555556,
+      "loop": false
+    },
+    "l_dragon": {
+      "start": 177,
+      "end": 189.3762358276644,
+      "loop": false
+    },
+    "leshy_ulta": {
+      "start": 191,
+      "end": 195.68,
+      "loop": false
+    },
+    "mixing_puff": {
+      "start": 197,
+      "end": 198.94401360544217,
+      "loop": false
+    },
+    "necro_a": {
+      "start": 200,
+      "end": 202.71201814058958,
+      "loop": false
+    },
+    "necro_pl": {
+      "start": 204,
+      "end": 207.21600907029477,
+      "loop": false
+    },
+    "pala_ulta_start": {
+      "start": 209,
+      "end": 210.15201814058958,
+      "loop": false
+    },
+    "rapidshots": {
+      "start": 212,
+      "end": 215.43201814058958,
+      "loop": false
+    },
+    "roar": {
+      "start": 217,
+      "end": 220.06696145124715,
+      "loop": false
+    },
+    "scream": {
+      "start": 222,
+      "end": 227.66399092970522,
+      "loop": false
+    },
+    "shark_ulta": {
+      "start": 229,
+      "end": 229.9840136054422,
+      "loop": false
+    },
+    "splat": {
+      "start": 231,
+      "end": 231.29945578231292,
+      "loop": false
+    },
+    "splat2": {
+      "start": 233,
+      "end": 233.84809523809523,
+      "loop": false
+    },
+    "splat3": {
+      "start": 235,
+      "end": 237.54496598639454,
+      "loop": false
+    },
+    "splat4": {
+      "start": 239,
+      "end": 239.5018140589569,
+      "loop": false
+    },
+    "summon": {
+      "start": 241,
+      "end": 248.2480045351474,
+      "loop": false
+    },
+    "sword_whoosh": {
+      "start": 250,
+      "end": 251.05600907029478,
+      "loop": false
+    },
+    "theircoming": {
+      "start": 253,
+      "end": 258.14732426303857,
+      "loop": false
+    },
+    "thunder": {
+      "start": 260,
+      "end": 262.02238095238096,
+      "loop": false
+    },
+    "tor_hammer": {
+      "start": 264,
+      "end": 264.86310657596374,
+      "loop": false
+    },
+    "tor_lb": {
+      "start": 266,
+      "end": 269.60532879818595,
+      "loop": false
+    },
+    "tor_ulta": {
+      "start": 271,
+      "end": 273.6160090702948,
+      "loop": false
+    },
+    "zombie-1": {
+      "start": 275,
+      "end": 275.8541723356009,
+      "loop": false
+    },
+    "zombie-2": {
+      "start": 277,
+      "end": 277.70832199546487,
+      "loop": false
+    }
+  }
+}

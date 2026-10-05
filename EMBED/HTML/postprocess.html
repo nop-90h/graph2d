@@ -1,0 +1,109 @@
+<!-- postprocess.html — пульт пост-процесса (стили в styles.css) -->
+<center><font name="edugot">
+<three class="three-winged pp-head" width="960">
+<font class="pp-head-title" appear="comet" appeardelay="0.00"><b>##PP_TITLE##</b></font></three><br><br>
+<br>
+<nine id="sec_master" class="pp-sec">
+<font class="pp-sec-title" appeardelay="0.00"><b>##PP_GROUP_MASTER##</b></font><br>
+<hr class="hr">
+<table class="tbl">
+<tr><td colspan="3" align="left" valign="middle">
+<checkbox class="pp-chk" id="pp_enabled" checked="true">
+<font class="pp-chk-label" appeardelay="0.06">##PP_POST_ENABLED##</font></checkbox></td></tr></table></nine><br>
+<nine id="sec_bloom" class="pp-sec">
+<font class="pp-sec-title" appeardelay="0.08"><b>##PP_GROUP_BLOOM##</b></font><br>
+<hr class="hr">
+<table class="tbl">
+<tr><td colspan="3" align="left" valign="middle">
+<checkbox class="pp-chk" id="pp_bloom_on" checked="true">
+<font class="pp-chk-label" appeardelay="0.14">##PP_BLOOM_ENABLED##</font></checkbox></td></tr><tr>
+<td align="left" valign="middle"><font class="pp-label" appeardelay="0.14"><b id="pp_bloom_int_l">##PP_INTENSITY##</b></font></td>
+<td align="left" valign="middle"><slider class="pp-slider" id="pp_bloom_int" min="0.00" max="4.00" step="0.05" value="1.00"/></td>
+<td align="right" valign="middle"><font class="pp-value" appeardelay="0.14"><b id="pp_bloom_int_v">1.00</b></font></td>
+</tr><tr>
+<td align="left" valign="middle"><font class="pp-label" appeardelay="0.14"><b id="pp_bloom_thr_l">##PP_THRESHOLD##</b></font></td>
+<td align="left" valign="middle"><slider class="pp-slider" id="pp_bloom_thr" min="0.00" max="2.00" step="0.05" value="1.00"/></td>
+<td align="right" valign="middle"><font class="pp-value" appeardelay="0.14"><b id="pp_bloom_thr_v">1.00</b></font></td>
+</tr><tr>
+<td align="left" valign="middle"><font class="pp-label" appeardelay="0.14"><b id="pp_bloom_rad_l">##PP_RADIUS##</b></font></td>
+<td align="left" valign="middle"><slider class="pp-slider" id="pp_bloom_rad" min="0.00" max="3.00" step="0.05" value="1.00"/></td>
+<td align="right" valign="middle"><font class="pp-value" appeardelay="0.14"><b id="pp_bloom_rad_v">1.00</b></font></td>
+</tr></table></nine><br>
+<nine id="sec_vignette" class="pp-sec">
+<font class="pp-sec-title" appeardelay="0.16"><b>##PP_GROUP_VIGNETTE##</b></font><br>
+<hr class="hr">
+<table class="tbl">
+<tr>
+<td align="left" valign="middle"><font class="pp-label" appeardelay="0.22"><b id="pp_vig_int_l">##PP_INTENSITY##</b></font></td>
+<td align="left" valign="middle"><slider class="pp-slider" id="pp_vig_int" min="0.00" max="1.00" step="0.01" value="0.30"/></td>
+<td align="right" valign="middle"><font class="pp-value" appeardelay="0.22"><b id="pp_vig_int_v">0.30</b></font></td>
+</tr><tr>
+<td align="left" valign="middle"><font class="pp-label" appeardelay="0.22"><b id="pp_vig_rad_l">##PP_RADIUS##</b></font></td>
+<td align="left" valign="middle"><slider class="pp-slider" id="pp_vig_rad" min="0.00" max="1.00" step="0.01" value="0.75"/></td>
+<td align="right" valign="middle"><font class="pp-value" appeardelay="0.22"><b id="pp_vig_rad_v">0.75</b></font></td>
+</tr><tr>
+<td align="left" valign="middle"><font class="pp-label" appeardelay="0.22"><b id="pp_vig_smo_l">##PP_SMOOTHNESS##</b></font></td>
+<td align="left" valign="middle"><slider class="pp-slider" id="pp_vig_smo" min="0.00" max="2.00" step="0.01" value="0.50"/></td>
+<td align="right" valign="middle"><font class="pp-value" appeardelay="0.22"><b id="pp_vig_smo_v">0.50</b></font></td>
+</tr><tr>
+<td align="left" valign="middle"><font class="pp-label" appeardelay="0.22"><b id="pp_vig_br_l">##PP_BREATHE##</b></font></td>
+<td align="left" valign="middle"><slider class="pp-slider" id="pp_vig_br" min="0.00" max="1.00" step="0.01" value="0.00"/></td>
+<td align="right" valign="middle"><font class="pp-value" appeardelay="0.22"><b id="pp_vig_br_v">0.00</b></font></td>
+</tr></table></nine><br>
+<nine id="sec_color" class="pp-sec">
+<font class="pp-sec-title" appeardelay="0.24"><b>##PP_GROUP_COLOR##</b></font><br>
+<hr class="hr">
+<table class="tbl">
+<tr>
+<td align="left" valign="middle"><font class="pp-label" appeardelay="0.30"><b id="pp_sat_l">##PP_SATURATION##</b></font></td>
+<td align="left" valign="middle"><slider class="pp-slider" id="pp_sat" min="0.00" max="2.00" step="0.01" value="1.00"/></td>
+<td align="right" valign="middle"><font class="pp-value" appeardelay="0.30"><b id="pp_sat_v">1.00</b></font></td>
+</tr><tr>
+<td align="left" valign="middle"><font class="pp-label" appeardelay="0.30"><b id="pp_con_l">##PP_CONTRAST##</b></font></td>
+<td align="left" valign="middle"><slider class="pp-slider" id="pp_con" min="0.00" max="2.00" step="0.01" value="1.00"/></td>
+<td align="right" valign="middle"><font class="pp-value" appeardelay="0.30"><b id="pp_con_v">1.00</b></font></td>
+</tr><tr>
+<td align="left" valign="middle"><font class="pp-label" appeardelay="0.30"><b id="pp_bri_l">##PP_BRIGHTNESS##</b></font></td>
+<td align="left" valign="middle"><slider class="pp-slider" id="pp_bri" min="-1.00" max="1.00" step="0.01" value="0.00"/></td>
+<td align="right" valign="middle"><font class="pp-value" appeardelay="0.30"><b id="pp_bri_v">0.00</b></font></td>
+</tr><tr>
+<td align="left" valign="middle"><font class="pp-label" appeardelay="0.30"><b id="pp_abe_l">##PP_ABERRATION##</b></font></td>
+<td align="left" valign="middle"><slider class="pp-slider" id="pp_abe" min="0.000" max="0.050" step="0.001" value="0.000"/></td>
+<td align="right" valign="middle"><font class="pp-value" appeardelay="0.30"><b id="pp_abe_v">0.000</b></font></td>
+</tr><tr>
+<td align="left" valign="middle"><font class="pp-label" appeardelay="0.30"><b id="pp_gra_l">##PP_GRAIN##</b></font></td>
+<td align="left" valign="middle"><slider class="pp-slider" id="pp_gra" min="0.00" max="1.00" step="0.01" value="0.05"/></td>
+<td align="right" valign="middle"><font class="pp-value" appeardelay="0.30"><b id="pp_gra_v">0.05</b></font></td>
+</tr></table></nine><br>
+<nine id="sec_warp" class="pp-sec">
+<font class="pp-sec-title" appeardelay="0.32"><b>##PP_GROUP_WARP##</b></font><br>
+<hr class="hr">
+<table class="tbl">
+<tr>
+<td align="left" valign="middle"><font class="pp-label" appeardelay="0.38"><b id="pp_dis_l">##PP_DISTORTION##</b></font></td>
+<td align="left" valign="middle"><slider class="pp-slider" id="pp_dis" min="0.00" max="1.00" step="0.01" value="0.00"/></td>
+<td align="right" valign="middle"><font class="pp-value" appeardelay="0.38"><b id="pp_dis_v">0.00</b></font></td>
+</tr><tr>
+<td align="left" valign="middle"><font class="pp-label" appeardelay="0.38"><b id="pp_fis_l">##PP_FISHEYE##</b></font></td>
+<td align="left" valign="middle"><slider class="pp-slider" id="pp_fis" min="0.00" max="1.00" step="0.01" value="0.00"/></td>
+<td align="right" valign="middle"><font class="pp-value" appeardelay="0.38"><b id="pp_fis_v">0.00</b></font></td>
+</tr></table></nine><br>
+<nine id="sec_weather" class="pp-sec">
+<font class="pp-sec-title" appeardelay="0.40"><b>##PP_GROUP_WEATHER##</b></font><br>
+<hr class="hr">
+<table class="tbl">
+<tr>
+<td align="left" valign="middle"><font class="pp-label" appeardelay="0.46"><b id="pp_rain_l">##PP_RAIN##</b></font></td>
+<td align="left" valign="middle"><slider class="pp-slider" id="pp_rain" min="0.00" max="1.00" step="0.01" value="0.00"/></td>
+<td align="right" valign="middle"><font class="pp-value" appeardelay="0.46"><b id="pp_rain_v">0.00</b></font></td>
+</tr><tr>
+<td align="left" valign="middle"><font class="pp-label" appeardelay="0.46"><b id="pp_blood_l">##PP_BLOOD##</b></font></td>
+<td align="left" valign="middle"><slider class="pp-slider" id="pp_blood" min="0.00" max="1.00" step="0.01" value="0.00"/></td>
+<td align="right" valign="middle"><font class="pp-value" appeardelay="0.46"><b id="pp_blood_v">0.00</b></font></td>
+</tr></table></nine>
+<!-- сброс и подсказка (были закомментированы в C++):
+<ninebutton class="btn-cyan" id="pp_reset" padding-top="18" padding-bottom="18" padding-left="40" padding-right="40">
+<font class="pp-reset-text" appeardelay="0.55"><b>##PP_RESET##</b></font></ninebutton><br>
+<font size="22" color="#6B5B4A"><i>##PP_HINT##</i></font>
+-->
+</font></center>

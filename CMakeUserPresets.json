@@ -20,11 +20,28 @@
       }
     },
     {
-      "name": "emscripten-wasm",
-      "displayName": "Emscripten (WebAssembly)",
-      "binaryDir": "${sourceDir}/out/build/emscripten-wasm",
-      "generator": "Ninja Multi-Config",
-      "toolchainFile": "${sourceDir}/emsdk/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake"
+      "name": "emscripten-wasm-base",
+      "hidden": true,
+      "generator": "Ninja",
+      "toolchainFile": "$env{EMSDK}/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake"
+    },
+    {
+      "name": "emscripten-wasm-debug",
+      "displayName": "Emscripten (WebAssembly) — Debug",
+      "inherits": "emscripten-wasm-base",
+      "binaryDir": "${sourceDir}/out/build/emscripten-wasm-debug",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "emscripten-wasm-release",
+      "displayName": "Emscripten (WebAssembly) — Release",
+      "inherits": "emscripten-wasm-base",
+      "binaryDir": "${sourceDir}/out/build/emscripten-wasm-release",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
     }
   ],
   "buildPresets": [
@@ -40,13 +57,11 @@
     },
     {
       "name": "WebAssembly-Debug",
-      "configurePreset": "emscripten-wasm",
-      "configuration": "Debug"
+      "configurePreset": "emscripten-wasm-debug"
     },
     {
       "name": "WebAssembly-Release",
-      "configurePreset": "emscripten-wasm",
-      "configuration": "Release"
+      "configurePreset": "emscripten-wasm-release"
     }
   ]
 }

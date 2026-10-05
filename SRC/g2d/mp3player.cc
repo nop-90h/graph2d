@@ -8,6 +8,8 @@
 #include "miniaudio.h"
 #endif
 
+#include "engine.h"
+
 _G2D_NAMESPACE_BEGIN_
 
 #ifdef G2D_WEB_AUDIO
@@ -334,6 +336,8 @@ void MP3Player::loadNextTrack()
 
     std::string url = playlist_urls[current_track_index];
 
+    auto sRealUrl = std::format("{}/{}", Engine::getCfg().RES_DIR, url);
+
     std::cout << "Loading track "
               << (current_track_index + 1) << "/"
               << playlist_urls.size() << ": "
@@ -345,7 +349,7 @@ void MP3Player::loadNextTrack()
         const_cast<char*>(url.c_str())
     );
 
-    loadAsync(url, [](bool success) {
+    loadAsync(sRealUrl, [](bool success) {
         auto& player = MP3Player::get();
 
         if (player.current_track_index >= player.playlist_urls.size())
@@ -795,6 +799,8 @@ void MP3Player::loadNextTrack()
 
     std::string url = playlist_urls[current_track_index];
 
+    auto sRealUrl = std::format("{}/{}", Engine::getCfg().RES_DIR, url);
+
     std::cout << "Loading track "
               << (current_track_index + 1) << "/"
               << playlist_urls.size() << ": "
@@ -806,7 +812,7 @@ void MP3Player::loadNextTrack()
         const_cast<char*>(url.c_str())
     );
 
-    loadAsync(url, [](bool success) {
+    loadAsync(sRealUrl, [](bool success) {
         auto& player = get();
 
         if (player.current_track_index >= player.playlist_urls.size())

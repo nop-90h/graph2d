@@ -71,7 +71,7 @@ public:
 			_ptrTitle->setText(L10N::getInstance().tr("CUBE_CLOSED_DESC"));
 			_root->addChild(_ptrTitle);
 			_ptrTitle->setXPosCentered(getDialogCx());
-			_ptrCube = CSpineManager::getInstance()->getNewSpine("BBB/CUBE_CLOSED");
+			_ptrCube = CSpineManager::getInstance()->getNewSpine("CUBE_CLOSED");
 			_ptrCube->setSkipLight(true);
 			_ptrCube->setScale(1.3f, 1.3f);
 			_ptrCube->setPos(cx * 0.5f, cy * 0.5f);
@@ -154,7 +154,7 @@ public:
 		bool bRes = BaseDialog::init(cx, cy, eScrollType::E_ST_NONE, NULL, NULL);
 		if (bRes)
 		{
-			_ptrCube = CSpineManager::getInstance()->getNewSpine("BBB/CUBE_OPEN");
+			_ptrCube = CSpineManager::getInstance()->getNewSpine("CUBE_OPEN");
 			_ptrCube->setSkipLight(true);
 			_ptrCube->setScale(1.3f, 1.3f);
 			_ptrCube->setPos(cx * 0.5f, cy * 0.5f);
@@ -556,7 +556,7 @@ public:
 				NovelEntry nov[] = {
 					{
 						.fBgShowPause    = 1.f,
-						.lpszBg          = _nFunGameSelected == 0 ? "BBB/calling_doctor.jpg" : "BBB/calling_doctor2.jpg",
+						.lpszBg          = _nFunGameSelected == 0 ? "calling_doctor.jpg" : "calling_doctor2.jpg",
 						.lpszSpeakerPic  = nullptr,
 						.lpszSpeakerText = _nFunGameSelected == 0 ? L10N::getInstance().tr("DIAL_SPEAKER1_0") : L10N::getInstance().tr("DIAL_SPEAKER1_1"),
 						.fYTextCorrection = 0.f,
@@ -576,7 +576,7 @@ public:
 					},
 					{
 						.fBgShowPause    = 0.f,
-						.lpszBg          = _nFunGameSelected == 0 ? "BBB/calling_doctor.jpg" : "BBB/calling_doctor2.jpg",
+						.lpszBg          = _nFunGameSelected == 0 ? "calling_doctor.jpg" : "calling_doctor2.jpg",
 						.lpszSpeakerPic  = nullptr,
 						.lpszSpeakerText = _nFunGameSelected == 0 ? L10N::getInstance().tr("DIAL_SPEAKER2_0") : L10N::getInstance().tr("DIAL_SPEAKER2_1"),
 						.fYTextCorrection = 0.f,
@@ -839,7 +839,7 @@ public:
 		CGfx::getInstance()->setWorldDarken(false);
 		setTimeout(1.f, [this, cb] {
 			auto& cfg = Engine::getCfg();
-			auto ptrSpine = CSpineManager::getInstance()->getNewSpine("BBB/gametitle");
+			auto ptrSpine = CSpineManager::getInstance()->getNewSpine("gametitle");
 			ptrSpine->setPos(cfg.INIT_SCR_CX * 0.5f, cfg.INIT_SCR_CY * 0.5f - 200.f);
 			_ptrGameHolder->addChild(ptrSpine);
 			ptrSpine->setAlpha(0.f);
@@ -927,7 +927,7 @@ public:
 				.lpszBg          = nullptr,
 				.spineOpts =
 				{
-					.lpszSpeakerSpine = "BBB/amarantha",
+					.lpszSpeakerSpine = "amarantha",
 				},
 				.lpszSpeakerText = L10N::getInstance().tr("FIN_LINE1"),
 				.fYTextCorrection = 0.f,
@@ -947,7 +947,7 @@ public:
 			},
 			{
 				.lpszBg            = nullptr,
-				.lpszSpeakerPic    = "BBB/barb.png",
+				.lpszSpeakerPic    = "barb.png",
 				.lpszSpeakerText   = L10N::getInstance().tr("FIN_LINE2"),
 				.fYTextCorrection  = 0.f,
 				.fWorldDarken      = .4f,
@@ -967,7 +967,7 @@ public:
 				.lpszBg          = nullptr,
 				.spineOpts =
 				{
-					.lpszSpeakerSpine = "BBB/amarantha",
+					.lpszSpeakerSpine = "amarantha",
 				},
 				.lpszSpeakerText   = L10N::getInstance().tr("FIN_LINE3"),
 				.fYTextCorrection  = 0.f,
@@ -989,7 +989,7 @@ public:
 				.lpszBg          = nullptr,
 				.spineOpts =
 				{
-					.lpszSpeakerSpine   = "BBB/amarantha",
+					.lpszSpeakerSpine   = "amarantha",
 					.lpszAnimNameSwitch = "charge",
 					.lpszAnimNameNew    = "idle_charged"
 				},
@@ -1012,7 +1012,7 @@ public:
 			},
 			{
 				.lpszBg            = nullptr,
-				.lpszSpeakerPic    = "BBB/barb.png",
+				.lpszSpeakerPic    = "barb.png",
 				.lpszSpeakerText   = L10N::getInstance().tr("FIN_LINE5"),
 				.fYTextCorrection  = 0.f,
 				.fWorldDarken      = .4f,
@@ -1032,7 +1032,7 @@ public:
 				.lpszBg          = nullptr,
 				.spineOpts =
 				{
-					.lpszSpeakerSpine   = "BBB/alianna",
+					.lpszSpeakerSpine   = "alianna",
 					.lpszAnimName       = "idle"
 				},
 				.lpszSpeakerText    = L10N::getInstance().tr("FIN_LINE6"),
@@ -1053,7 +1053,7 @@ public:
 			},
 			{
 				.lpszBg            = nullptr,
-				.lpszSpeakerPic    = "BBB/barb.png",
+				.lpszSpeakerPic    = "barb.png",
 				.lpszSpeakerText   = L10N::getInstance().tr("FIN_LINE7"),
 				.fYTextCorrection  = 0.f,
 				.fWorldDarken      = .4f,
@@ -1073,7 +1073,7 @@ public:
 				.lpszBg          = nullptr,
 				.spineOpts =
 				{
-					.lpszSpeakerSpine = "BBB/amarantha",
+					.lpszSpeakerSpine = "amarantha",
 					.lpszAnimName     = "idle_charged",
 				},
 				.lpszSpeakerText    = L10N::getInstance().tr("FIN_LINE8"),
@@ -1097,7 +1097,7 @@ public:
 				.lpszBg          = nullptr,
 				.spineOpts =
 				{
-					.lpszSpeakerSpine   = "BBB/alianna",
+					.lpszSpeakerSpine   = "alianna",
 					.lpszAnimNameSwitch = "charge",
 					.lpszAnimNameNew    = "idle_charged",
 					.lpszFinalAnimName  = "spawn_tentacle"
@@ -1122,7 +1122,7 @@ public:
 				.lpszBg          = nullptr,
 				.spineOpts =
 				{
-					.lpszSpeakerSpine   = "BBB/amarantha",
+					.lpszSpeakerSpine   = "amarantha",
 					.lpszAnimNameSwitch = "curse",
 					.lpszAnimNameNew    = "idle_wounded"
 				},
@@ -1147,7 +1147,7 @@ public:
 				.lpszBg          = nullptr,
 				.spineOpts =
 				{
-					.lpszSpeakerSpine = "BBB/alianna",
+					.lpszSpeakerSpine = "alianna",
 					.lpszAnimName     = "idle_charged",
 				},
 				.lpszSpeakerText    = L10N::getInstance().tr("FIN_LINE11"),
@@ -1168,7 +1168,7 @@ public:
 			},
 			{
 				.lpszBg            = nullptr,
-				.lpszSpeakerPic    = "BBB/barb.png",
+				.lpszSpeakerPic    = "barb.png",
 				.lpszSpeakerText   = L10N::getInstance().tr("FIN_LINE12"),
 				.fYTextCorrection  = 0.f,
 				.fWorldDarken      = .4f,
@@ -1188,7 +1188,7 @@ public:
 				.lpszBg          = nullptr,
 				.spineOpts =
 				{
-					.lpszSpeakerSpine = "BBB/alianna",
+					.lpszSpeakerSpine = "alianna",
 					.lpszAnimName     = "idle_charged",
 				},
 				.lpszSpeakerText    = L10N::getInstance().tr("FIN_LINE13"),
@@ -1211,7 +1211,7 @@ public:
 				.lpszBg          = nullptr,
 				.spineOpts =
 				{
-					.lpszSpeakerSpine   = "BBB/amarantha",
+					.lpszSpeakerSpine   = "amarantha",
 					.lpszAnimName       = "idle_wounded"
 				},
 				.lpszSpeakerText    = L10N::getInstance().tr("FIN_LINE14"),
@@ -1233,7 +1233,7 @@ public:
 			},
 			{
 				.lpszBg            = nullptr,
-				.lpszSpeakerPic    = "BBB/barb.png",
+				.lpszSpeakerPic    = "barb.png",
 				.lpszSpeakerText   = L10N::getInstance().tr("FIN_FINAL_QUESTION"),
 				.fYTextCorrection  = 0.f,
 				.fWorldDarken      = .4f,
@@ -1261,7 +1261,7 @@ public:
 		nov[14].answers[1]._cbOnSelected = [this, cb](SimpleCallback fcb) {
 			assert(_isBookTaken);
 			fcb();
-			auto ptrPortal = CSpineManager::getInstance()->getNewSpine("BBB/portal");
+			auto ptrPortal = CSpineManager::getInstance()->getNewSpine("portal");
 			ptrPortal->setAnimation(0, "animation", true);
 			_ptrEnterCubeBgCont->addChild(ptrPortal);
 			ptrPortal->setPos(_ptrAngel->getX() + 400, _ptrAngel->getY());
@@ -1326,7 +1326,7 @@ public:
 		static NovelEntry novCantEnter[] = {
 			{
 				.lpszBg            = nullptr,
-				.lpszSpeakerPic    = "BBB/barb.png",
+				.lpszSpeakerPic    = "barb.png",
 				.lpszSpeakerText   = L10N::getInstance().tr("HEADS_PORTAL_CANT"),
 				.fYTextCorrection  = 0.f,
 				.fWorldDarken      = .4f,
@@ -1365,7 +1365,7 @@ public:
 		static NovelEntry novStart[] = {
 			{
 				.lpszBg            = nullptr,
-				.lpszSpeakerPic    = "BBB/barb.png",
+				.lpszSpeakerPic    = "barb.png",
 				.lpszSpeakerText   = L10N::getInstance().tr("SANCTUARY_START"),
 				.fYTextCorrection  = 0.f,
 				.fWorldDarken      = .4f,
@@ -1385,7 +1385,7 @@ public:
 		static NovelEntry novBookFound[] = {
 			{
 				.lpszBg            = nullptr,
-				.lpszSpeakerPic    = "BBB/barb.png",
+				.lpszSpeakerPic    = "barb.png",
 				.lpszSpeakerText   = L10N::getInstance().tr("BOOK_FOUND"),
 				.fYTextCorrection  = 0.f,
 				.fWorldDarken      = .4f,
@@ -1475,7 +1475,7 @@ public:
 		_rcMoveArea.set(0.f, 400.f, 1000.f, 210.f);
 		_nKeyIdx = 0;
 		_ptrAngel->removeFromParent();
-		_ptrAngel = CSpineManager::getInstance()->getNewSpine("BBB/angel", false);
+		_ptrAngel = CSpineManager::getInstance()->getNewSpine("angel", false);
 		_ptrAngel->setScale(1.f, 1.f);
 		_ptrAngel->setLightAttachment("lightspot");
 		_ptrAngel->addRadialLight(100, "fire",  "fire").color.set(1.f, 0.7f, 0.1f);
@@ -1546,7 +1546,7 @@ public:
 				.lpszBg          = nullptr,
 				.spineOpts =
 				{
-					.lpszSpeakerSpine = "BBB/amarantha",
+					.lpszSpeakerSpine = "amarantha",
 				},
 				.lpszSpeakerText = L10N::getInstance().tr("LAST_INTRO"),
 				.fYTextCorrection = 0.f,
@@ -1591,7 +1591,7 @@ public:
 		static NovelEntry nov[] = {
 			{
 				.fBgShowPause    = 1.f,
-				.lpszBg          = "BBB/doctor_ambulance.jpg",
+				.lpszBg          = "doctor_ambulance.jpg",
 				.lpszSpeakerPic  = nullptr,
 				.lpszSpeakerText = L10N::getInstance().tr("DRIVE_SPEAKER1"),
 				.fYTextCorrection = 0.f,
@@ -1611,7 +1611,7 @@ public:
 			},
 			{
 				.fBgShowPause    = 0.f,
-				.lpszBg          = "BBB/doctor_ambulance.jpg",
+				.lpszBg          = "doctor_ambulance.jpg",
 				.lpszSpeakerPic  = nullptr,
 				.lpszSpeakerText = L10N::getInstance().tr("DRIVE_SPEAKER2"),
 				.fYTextCorrection = 0.f,
@@ -1828,7 +1828,7 @@ public:
 
 	void initDial()
 	{
-		_ptrPhoneCall = CSpineManager::getInstance()->getNewSpine("BBB/phone");
+		_ptrPhoneCall = CSpineManager::getInstance()->getNewSpine("phone");
 		_ptrDialLayer->addChild(_ptrPhoneCall);
 		_ptrPhoneCall->setPos(1674.f * 0.5f, 943.f * 0.5f);
 	}
@@ -1836,19 +1836,19 @@ public:
 	void initDrive()
 	{
 		auto& cfg       = Engine::getCfg();
-		auto ptrShizBg = CGfx::getInstance()->spriteFromTexture(CGfx::getInstance()->getTextureById("BBB/shiz_bg.png"));
+		auto ptrShizBg = CGfx::getInstance()->spriteFromTexture(CGfx::getInstance()->getTextureById("shiz_bg.png"));
 		Rect rcU{ 0,   0, ptrShizBg->calcNotTransCx(), 580 };
 		Rect rcB{ 0, 580, ptrShizBg->calcNotTransCx(), ptrShizBg->calcNotTransCy() - 580 };
-		_ptrShizBgU    = CGfx::getInstance()->spriteFromTexture(CGfx::getInstance()->getTextureById("BBB/shiz_bg_u.png"));
-		_ptrShizBgB    = CGfx::getInstance()->spriteFromTexture(CGfx::getInstance()->getTextureById("BBB/shiz_bg_b.png"));
+		_ptrShizBgU    = CGfx::getInstance()->spriteFromTexture(CGfx::getInstance()->getTextureById("shiz_bg_u.png"));
+		_ptrShizBgB    = CGfx::getInstance()->spriteFromTexture(CGfx::getInstance()->getTextureById("shiz_bg_b.png"));
 		_ptrShizBgCont = std::make_shared<CContainer>();
 		_ptrShizBgCont->addChild(_ptrShizBgU);
 		_ptrShizBgCont->addChild(_ptrShizBgB);
 		_ptrShizBgB->setLightLayer(1);
 		_ptrShizBgB->setY(470);
-		_ptrShizBg2    = CGfx::getInstance()->spriteFromTexture(CGfx::getInstance()->getTextureById("BBB/shiz_bg2.png"));
-		_ptrEnterCubeBg     = CSpineManager::getInstance()->getNewSpine("BBB/enter_cube_bg", false);
-		_ptrSanctuaryBg     = CSpineManager::getInstance()->getNewSpine("BBB/sanctuary",     false);
+		_ptrShizBg2    = CGfx::getInstance()->spriteFromTexture(CGfx::getInstance()->getTextureById("shiz_bg2.png"));
+		_ptrEnterCubeBg     = CSpineManager::getInstance()->getNewSpine("enter_cube_bg", false);
+		_ptrSanctuaryBg     = CSpineManager::getInstance()->getNewSpine("sanctuary",     false);
 		_ptrEnterCubeBgCont = std::make_shared<CContainer>();
 		_ptrShizBgU->setSkipLight(false);
 		_ptrShizBgB->setSkipLight(false);
@@ -1856,12 +1856,12 @@ public:
 		_ptrShizBg2->setPosCentered(getDialogCx(), getDialogCy());
 		_ptrNotebook       = SpriteLoader::getInstance()->getSprite("SHIZ/notebook");
 		_ptrNotebookBurned = SpriteLoader::getInstance()->getSprite("SHIZ/notebook_burned");
-		_ptrShiz        = CSpineManager::getInstance()->getNewSpine("BBB/programmer",  true);
-		_ptrLamp        = CSpineManager::getInstance()->getNewSpine("BBB/streetlamp",  true);
-		_ptrAmbulance   = CSpineManager::getInstance()->getNewSpine("BBB/ambulance",   true);
-		_ptrCubeClosed  = CSpineManager::getInstance()->getNewSpine("BBB/CUBE_CLOSED", false);
-		_ptrAngel       = CSpineManager::getInstance()->getNewSpine("BBB/angel",       false);
-		_ptrBarbarian   = CSpineManager::getInstance()->getNewSpine("BBB/barbarian",   false);
+		_ptrShiz        = CSpineManager::getInstance()->getNewSpine("programmer",  true);
+		_ptrLamp        = CSpineManager::getInstance()->getNewSpine("streetlamp",  true);
+		_ptrAmbulance   = CSpineManager::getInstance()->getNewSpine("ambulance",   true);
+		_ptrCubeClosed  = CSpineManager::getInstance()->getNewSpine("CUBE_CLOSED", false);
+		_ptrAngel       = CSpineManager::getInstance()->getNewSpine("angel",       false);
+		_ptrBarbarian   = CSpineManager::getInstance()->getNewSpine("barbarian",   false);
 		auto strPath    = std::format("PARTICLES/{}", ParticlePresets::getPresetSpriteName(eParticlePreset::AMBIENT_DUST));
 		auto strPath2   = std::format("PARTICLES/{}", ParticlePresets::getPresetSpriteName(eParticlePreset::FIREFLIES));
 		_ptrFlies       = std::make_shared<CParticleSystem<>>(ParticlePresets::getPreset(eParticlePreset::AMBIENT_DUST), strPath.c_str());
@@ -1876,8 +1876,8 @@ public:
 		_ptrShiz->setLightLayer(1);
 		assert(!_ptrAngel->isSaveTransCoords());
 		_ptrEnterCubeBgCont->setScale(1.33f, 1.33f);
-		_ptrDragon = CSpineManager::getInstance()->getNewSpine("BBB/dragon");
-		_ptrMita   = CSpineManager::getInstance()->getNewSpine("BBB/mita");
+		_ptrDragon = CSpineManager::getInstance()->getNewSpine("dragon");
+		_ptrMita   = CSpineManager::getInstance()->getNewSpine("mita");
 		_ptrMita->setInteractive(true);
 		_ptrDragon->setLightLayer(2);
 		_ptrShiz->setScale(0.4f, 0.4f);
@@ -1889,7 +1889,7 @@ public:
 		_ptrNotebookBurned->setVisible(false);
 		for (int i = 0; i < SIZE_OF(_ptrFires); i++)
 		{
-			_ptrFires[i] = CSpineManager::getInstance()->getNewSpine("BBB/buffs_effects");
+			_ptrFires[i] = CSpineManager::getInstance()->getNewSpine("buffs_effects");
 		}
 	}
 
@@ -2012,10 +2012,10 @@ public:
 	{
 		LPCTSTR lpszFontName = "secretorigins";
 		std::span<SpineVertsDrawable> emptyDrawers;
-		const char* fileNames[] = { "BBB/intro.panm" };
+		const char* fileNames[] = { "intro.panm" };
 		const char* animNames[] = { "animation" };
 		CTexturePtr ptrTex =
-			CGfx::getInstance()->uploadAsset("BBB/zvezda_prepared.png");
+			CGfx::getInstance()->uploadAsset("zvezda_prepared.png");
 		_ptrIntro = std::make_shared<CBakedSpine>(fileNames, animNames, ptrTex);
 		_ptrIntro->setPos(1674.f * 0.5f, 943.f * 0.5f);
 		_ptrIntroLayer->addChild(_ptrIntro);
@@ -2137,32 +2137,32 @@ void MyApp::init()
 	L10N::getInstance().load(engineCfg.LANG == eLang::RU ? eLang::RU : eLang::EN);
 	Rect rcScreen = { 0, 0, engineCfg.INIT_SCR_CX, engineCfg.INIT_SCR_CY };
 	_ptrPreloader = std::make_shared<Preloader>();
-	SpineMixingOptions::setMixTime("BBB/ambulance",     "def",           "def",           0.03f);
-	SpineMixingOptions::setMixTime("BBB/ambulance",     "idle",          "doctor_arrive", 0.0f);
-	SpineMixingOptions::setMixTime("BBB/ambulance",     "doctor_arrive", "doctor_idle",   0.0f);
-	SpineMixingOptions::setMixTime("BBB/mita",          "def",           "def",           0.0f);
-	SpineMixingOptions::setMixTime("BBB/phone",         "def",           "def",           0.0f);
-	SpineMixingOptions::setMixTime("BBB/angel",         "def",           "def",           0.1f);
-	SpineMixingOptions::setMixTime("BBB/barbarian",     "def",           "def",           0.1f);
-	SpineMixingOptions::setMixTime("BBB/enter_cube_bg", "def",           "def",           0.0f);
-	SpineMixingOptions::setMixTime("BBB/sanctuary",     "def",           "def",           0.0f);
-	SpineMixingOptions::setMixTime("BBB/alianna",       "def",           "def",           0.0f);
+	SpineMixingOptions::setMixTime("ambulance",     "def",           "def",           0.03f);
+	SpineMixingOptions::setMixTime("ambulance",     "idle",          "doctor_arrive", 0.0f);
+	SpineMixingOptions::setMixTime("ambulance",     "doctor_arrive", "doctor_idle",   0.0f);
+	SpineMixingOptions::setMixTime("mita",          "def",           "def",           0.0f);
+	SpineMixingOptions::setMixTime("phone",         "def",           "def",           0.0f);
+	SpineMixingOptions::setMixTime("angel",         "def",           "def",           0.1f);
+	SpineMixingOptions::setMixTime("barbarian",     "def",           "def",           0.1f);
+	SpineMixingOptions::setMixTime("enter_cube_bg", "def",           "def",           0.0f);
+	SpineMixingOptions::setMixTime("sanctuary",     "def",           "def",           0.0f);
+	SpineMixingOptions::setMixTime("alianna",       "def",           "def",           0.0f);
 	auto cbOnLoaded = [this]
 	{
 		SpriteLoader::getInstance()->addAtlas("ui");
-		CGfx::getInstance()->uploadAsset("BBB/calling_doctor.jpg");
-		CGfx::getInstance()->uploadAsset("BBB/calling_doctor2.jpg");
-		CGfx::getInstance()->uploadAsset("BBB/doctor_ambulance.jpg");
-		auto sJSON = AssetLoader::instance().getLoadedFileStr("BBB/sounds.json");
+		CGfx::getInstance()->uploadAsset("calling_doctor.jpg");
+		CGfx::getInstance()->uploadAsset("calling_doctor2.jpg");
+		CGfx::getInstance()->uploadAsset("doctor_ambulance.jpg");
+		auto sJSON = AssetLoader::instance().getLoadedFileStr("sounds.json");
 		AudioManager::get().loadSpriteMetadata("sfx", "", sJSON.c_str(), [this] {
 			_ptrGame = std::make_shared<ShizGame>();
 			_ptrGame->init();
 		});
 	};
-	_ptrPreloader->filesToLoad().add("BBB/calling_doctor.jpg");
-	_ptrPreloader->filesToLoad().add("BBB/calling_doctor2.jpg");
-	_ptrPreloader->filesToLoad().add("BBB/doctor_ambulance.jpg");
-	_ptrPreloader->filesToLoad().add("BBB/barb.png");
+	_ptrPreloader->filesToLoad().add("calling_doctor.jpg");
+	_ptrPreloader->filesToLoad().add("calling_doctor2.jpg");
+	_ptrPreloader->filesToLoad().add("doctor_ambulance.jpg");
+	_ptrPreloader->filesToLoad().add("barb.png");
 	_ptrPreloader->filesToLoad().addSpine("programmer", 1, true);
 	_ptrPreloader->filesToLoad().addSpine("streetlamp", 1, true);
 	_ptrPreloader->filesToLoad().addSpine("ambulance",  1, true);
@@ -2182,21 +2182,21 @@ void MyApp::init()
 	_ptrPreloader->filesToLoad().addSpine("alianna");
 	_ptrPreloader->filesToLoad().addSpine("gametitle");
 	_ptrPreloader->filesToLoad().addSpine("portal");
-	_ptrPreloader->filesToLoad().add("BBB/shiz_bg.png");
-	_ptrPreloader->filesToLoad().add("BBB/shiz_bg_n.png");
-	_ptrPreloader->filesToLoad().add("BBB/shiz_bg2.png");
-	_ptrPreloader->filesToLoad().add("BBB/shiz_bg_u.png");
-	_ptrPreloader->filesToLoad().add("BBB/shiz_bg_b.png");
-	_ptrPreloader->filesToLoad().add("BBB/ui.png");
-	_ptrPreloader->filesToLoad().add("BBB/ui.atlas");
-	_ptrPreloader->filesToLoad().add("BBB/sounds.json");
-	_ptrPreloader->filesToLoad().add("BBB/sounds.mp3");
-	_ptrPreloader->filesToLoad().add("BBB/boss_bg.mp3");
-	_ptrPreloader->filesToLoad().add("BBB/axe03.mp3");
-	_ptrPreloader->filesToLoad().add("BBB/axe04.mp3");
-	_ptrPreloader->filesToLoad().add("BBB/intro.panm");
-	_ptrPreloader->filesToLoad().add("BBB/barbarian_idle.panm");
-	_ptrPreloader->filesToLoad().add("BBB/barbarian_run.panm");
+	_ptrPreloader->filesToLoad().add("shiz_bg.png");
+	_ptrPreloader->filesToLoad().add("shiz_bg_n.png");
+	_ptrPreloader->filesToLoad().add("shiz_bg2.png");
+	_ptrPreloader->filesToLoad().add("shiz_bg_u.png");
+	_ptrPreloader->filesToLoad().add("shiz_bg_b.png");
+	_ptrPreloader->filesToLoad().add("ui.png");
+	_ptrPreloader->filesToLoad().add("ui.atlas");
+	_ptrPreloader->filesToLoad().add("sounds.json");
+	_ptrPreloader->filesToLoad().add("sounds.mp3");
+	_ptrPreloader->filesToLoad().add("boss_bg.mp3");
+	_ptrPreloader->filesToLoad().add("axe03.mp3");
+	_ptrPreloader->filesToLoad().add("axe04.mp3");
+	_ptrPreloader->filesToLoad().add("intro.panm");
+	_ptrPreloader->filesToLoad().add("barbarian_idle.panm");
+	_ptrPreloader->filesToLoad().add("barbarian_run.panm");
 	_ptrPreloader->filesToLoad().setSizeToLoad(63996535);
 	_ptrPreloader->init(cbOnLoaded);
 	HTMLDom::getInstance()->parseCSSFromFile("EMBED/HTML/styles.css");

@@ -4,15 +4,7 @@
 #include <spine/spine.h>
 #include "gfx.h"
 #include "easing.h"
-
-#include <cstdint>
-#include <deque>
-#include <map>
-#include <memory>
-#include <string>
-#include <tuple>
-#include <unordered_map>
-#include <vector>
+#include "engine.h"
 
 _G2D_NAMESPACE_BEGIN_
 
@@ -27,7 +19,8 @@ public:
                                   LPCTSTR lpszToAnim,
                                   float fMixTime)
     {
-        auto it = _mapMix.find(lpszSpinePath);
+        auto s = std::format("{}/{}", Engine::getCfg().RES_DIR, lpszSpinePath);
+        auto it = _mapMix.find(s.c_str());
 
         if (it != _mapMix.end())
         {

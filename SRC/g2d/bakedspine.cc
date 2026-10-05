@@ -1,6 +1,7 @@
 #include "bakedspine.h"
 #include "gfx.h"
 #include "spinepacked.h"
+#include "engine.h"
 
 _G2D_NAMESPACE_BEGIN_
 
@@ -97,6 +98,8 @@ bool SpineVertsDrawable::loadAnimation(const char* filename,
                                        float fTimeScale,
                                        bool ignoreAdditiveBlend)
 {
+    //auto s = std::format("{}/{}", Engine::getCfg().RES_DIR, filename);
+
     return setAnimation(PackedAnimCache::get(filename), animName,
                         isLooped,
                         ptrTex,

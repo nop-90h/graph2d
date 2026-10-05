@@ -20,7 +20,6 @@ int main(int argc, char* argv[])
     
     cfg.addFont("condence",      "EMBED/FONTS/FiraSansCondensed-Medium.ttf");
     
-    cfg.DATA_DIR             = "BBB/";
     cfg.DEFAULT_FONT_NAME    = "condence"; 
     cfg.NOVEL_FONT           = "condence";
     cfg.NOVEL_FONT_TEXT_SIZE = 52;

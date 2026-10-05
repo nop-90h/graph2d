@@ -2105,7 +2105,9 @@ CSpritePtr CGfx::spriteFromTexture(LPCTSTR lpszTexName)
 {
     CSpritePtr ptrRes;
 
-    auto it = _all.find(lpszTexName);
+    auto s = std::format("{}/{}", Engine::getCfg().RES_DIR, lpszTexName);
+
+    auto it = _all.find(s.c_str());
 
     assert(it != _all.end());
 
@@ -2579,11 +2581,18 @@ void CGfx::createTempTextures()
     }
 }
 
-CTexturePtr CGfx::getTextureById(LPCTSTR lpszTexId)
+CTexturePtr CGfx::getTextureById(LPCTSTR lpszTexId, bool bFullPath)
 {
+    LPCTSTR lpszPath = lpszTexId;
+    std::string s;
+    if (!bFullPath)
+    {
+        s = std::format("{}/{}", Engine::getCfg().RES_DIR, lpszTexId);
+        lpszPath = s.c_str();
+    }
     CTexturePtr pRes;
 
-    MapTexturesIt it = _all.find(lpszTexId);
+    MapTexturesIt it = _all.find(lpszPath);
 
     if (it != _all.end())
         pRes = it->second;
@@ -2729,11 +2738,11 @@ CTexturePtr CGfx::uploadAsset(LPCTSTR lpszFileName, const uint8_t* pBytes, size_
     return pRes;
 }
 
-CTexturePtr CGfx::uploadAsset(LPCTSTR lpszTexId)
+CTexturePtr CGfx::uploadAsset(LPCTSTR lpszTexId, bool bFullPath)
 {
     std::string strTexId = lpszTexId;
 
-    CTexturePtr pRes = getTextureById(strTexId.c_str());
+    CTexturePtr pRes = getTextureById(strTexId.c_str(), bFullPath);
 
     if (pRes && pRes->isUploaded())
     {
@@ -2803,17 +2812,15 @@ void CGfx::uploadGrainTexture()
 
     if (!_ptrTexGrain)
     {
-        auto sGrainPng = std::format("{}noise.png", cfg.DATA_DIR);
-
         int nSize = 0;
 
-        auto pBytes = AssetLoader::instance().getLoadedFile(sGrainPng.c_str(), nSize);
+        auto pBytes = AssetLoader::instance().getLoadedFile("noise.png", nSize);
 
         assert(pBytes);
 
         int cx, cy;
 
-        auto ptrDecodedBytes = decodeImage(sGrainPng.c_str(), nSize, pBytes, cx, cy);
+        auto ptrDecodedBytes = decodeImage("noise.png", nSize, pBytes, cx, cy);
 
         assert(ptrDecodedBytes);
 

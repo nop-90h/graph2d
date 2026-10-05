@@ -19,7 +19,7 @@ void RsrcFileGroup::addSpine(LPCTSTR lpccSpineName, int numOfPngs, bool bWithNor
 {
     auto& cfg = Engine::getCfg();
     
-    std::string strFilePath = cfg.DATA_DIR;
+    std::string strFilePath = "";//strFilePath = std::format("{}/", cfg.RES_DIR);
     strFilePath.append(lpccSpineName);
     
     std::string strFileAtlas(strFilePath);
@@ -44,7 +44,7 @@ void RsrcFileGroup::addSpine(LPCTSTR lpccSpineName, int numOfPngs, bool bWithNor
         else
         {
             assert(!bWithNormalMap && "Not implemented!");
-            std::string strFilePng = std::format("{}{}_{}.png", cfg.DATA_DIR, lpccSpineName , i);
+            std::string strFilePng = std::format("{}/{}_{}.png", cfg.RES_DIR, lpccSpineName , i);
             add(strFilePng.c_str());
         }
     }

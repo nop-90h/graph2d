@@ -2,7 +2,7 @@
 
 #include "g2d.h"
 #include "loader.h"
-
+#include "engine.h"
 _G2D_NAMESPACE_BEGIN_
 
 typedef std::function<void(LPCTSTR lpszFileName)> FncOnFileLoaded;
@@ -29,11 +29,12 @@ public:
 
     inline void add(LPCTSTR lpszFilePath) 
     { 
+        auto s = std::format("{}/{}", Engine::getCfg().RES_DIR, lpszFilePath);
         if (_eState == eRsrcFileGroupState::DONE)
                reset();
         assert(_eState == eRsrcFileGroupState::PENDING); 
         if (_eState == eRsrcFileGroupState::PENDING) 
-            _setFiles.insert(lpszFilePath); 
+            _setFiles.insert(s.c_str()); 
     }
     void addSpine(LPCTSTR lpccSpineName, int numOfPngs = 1, bool bWithNormalMap = false);
     void load(SimpleCallback cb, FncOnFileProgress cbOnProgress = {}, FncOnFileLoaded fOnSingleLoaded = {});

@@ -55,7 +55,7 @@ struct EngineCfg
     float                   SCROLL_BACK_TIME                    = 0.3f;
     float                   DRAG_BEGIN_DISTANCE                 = 10.f;
     std::string             WINDOW_TITLE                        = "Graph2D";
-    std::string             DATA_DIR                            = "./";
+    std::string             RES_DIR                             = "res";
     eLang                   LANG                                = eLang::EN;
     std::optional<eLang>    LANG_OVERRIDE                       ;// eLang::EN;// если задан, детект языка системы не выполняется
     eTimestepMode           TIMESTEP_MODE                       = eTimestepMode::VARIABLE;

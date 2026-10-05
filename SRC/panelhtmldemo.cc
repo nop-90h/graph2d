@@ -413,9 +413,9 @@ void PanelHTMLDemo::initVolumePage()
 
                     std::vector<std::string> v =
                     {
-                        "BBB/axe03.mp3",
-                        "BBB/axe04.mp3",
-                        "BBB/boss_bg.mp3"
+                        "axe03.mp3",
+                        "axe04.mp3",
+                        "boss_bg.mp3"
                     };
 
                     if (!_bIsMusicPlaying)

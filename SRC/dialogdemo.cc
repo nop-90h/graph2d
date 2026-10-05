@@ -1046,9 +1046,9 @@ void DialogDemo::initCardsDemo()
 void DialogDemo::initSpineAndLight()
 {
     auto bgSpr = CGfx::getInstance()->spriteFromTexture(
-        CGfx::getInstance()->getTextureById("BBB/shiz_bg.png"));
+        CGfx::getInstance()->getTextureById("shiz_bg.png"));
 
-    bgSpr->setNormalMap(CGfx::getInstance()->getTextureById("BBB/shiz_bg_n.png"));
+    bgSpr->setNormalMap(CGfx::getInstance()->getTextureById("shiz_bg_n.png"));
     bgSpr->setScaleTo(getDialogCx(), getDialogCy());
     bgSpr->setScale(1, 1);
     bgSpr->setSkipLight(false);
@@ -1057,13 +1057,13 @@ void DialogDemo::initSpineAndLight()
 
     auto pMan = CSpineManager::getInstance();
 
-    _ptrLamp = pMan->getNewSpine("BBB/streetlamp", true);
+    _ptrLamp = pMan->getNewSpine("streetlamp", true);
 
     _ptrLamp->setLightAttachment("light", true);
     _ptrLamp->setLightAttachment("lightspot", true);
     _ptrLamp->setLightAttachment("lightspot2", true);
 
-    auto ptrProg = pMan->getNewSpine("BBB/programmer", true);
+    auto ptrProg = pMan->getNewSpine("programmer", true);
 
     _ptrLamp->setScale(0.65, 0.65);
     _ptrLamp->setPos(400, 700);
@@ -1301,11 +1301,11 @@ void DialogDemo::initBakedSpine()
     {
         if (numOfSpines > 0)
         {
-            auto ptrBarbTex = CGfx::getInstance()->getTextureById("BBB/barbarian.png");
+            auto ptrBarbTex = CGfx::getInstance()->getTextureById("barbarian.png");
 
             for (auto i = 0; i < numOfSpines; i++)
             {
-                static const char* fileNames[] = { "BBB/barbarian_idle.panm", "BBB/barbarian_run.panm" };
+                static const char* fileNames[] = { "barbarian_idle.panm", "barbarian_run.panm" };
                 static const char* animNames[] = { "idle", "run" };
 
                 auto ptrSpine = std::make_shared<CBakedSpine>(fileNames, animNames, ptrBarbTex);

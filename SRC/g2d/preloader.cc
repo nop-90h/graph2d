@@ -32,12 +32,12 @@ void Preloader::init(SimpleCallback cbOnLoaded, const char* lpszHtml)
     _sHtml      = lpszHtml ? lpszHtml : defHtml;
     CGfx::getInstance()->getGameRoot()->addChild(shared_from_this());
     _ptrLabel = std::make_shared<StaticLabel>();
-    _preloader.add("BBB/whitebox.png");
-    _preloader.add("BBB/noise.png");
+    _preloader.add("whitebox.png");
+    _preloader.add("noise.png");
     if (!_preloader.empty())
     {
         _preloader.load([this]{
-            Engine::getCfg().wb = CGfx::getInstance()->spriteFromTexture("BBB/whitebox.png");
+            Engine::getCfg().wb = CGfx::getInstance()->spriteFromTexture("whitebox.png");
             startLoad();
         });
     }

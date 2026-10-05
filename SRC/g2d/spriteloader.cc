@@ -406,7 +406,7 @@ bool SpriteLoader::addAtlas(const char* lpccAtlas)
 
     auto& cfg = Engine::getCfg();
 
-    std::string strAtlasPath = cfg.DATA_DIR;
+    std::string strAtlasPath = "";
     strAtlasPath.append(lpccAtlas);
     strAtlasPath.append(".atlas");
 

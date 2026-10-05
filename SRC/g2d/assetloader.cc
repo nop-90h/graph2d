@@ -1,5 +1,6 @@
 #include "assetloader.h"
 #include "gfx.h" 
+#include "engine.h"
 
 _G2D_NAMESPACE_BEGIN_
 
@@ -245,7 +246,7 @@ void AssetLoader::_onJsSuccess(LPCTSTR url, const uint8_t* data, size_t size) {
         for (auto&it:_filesRequested)
         {
             if (isImage(it))
-                CGfx::getInstance()->uploadAsset(it.c_str());
+                CGfx::getInstance()->uploadAsset(it.c_str(), true);
         }        
         _filesRequested.clear();
         auto cbs = std::move(_completeCallbacks);
@@ -315,6 +316,7 @@ void AssetLoader::workerLoop()
         std::FILE* file = std::fopen(url.c_str(), "rb");
         if (!file)
         {
+            assert(false);
             pushLoadEvent(LoadResult{ url, nullptr, 0, 1 });
             continue;
         }
@@ -324,6 +326,7 @@ void AssetLoader::workerLoop()
         std::rewind(file);
         if (total <= 0)
         {
+            assert(false);
             std::fclose(file);
             pushLoadEvent(LoadResult{ url, nullptr, 0, 2 });
             continue;
@@ -332,6 +335,7 @@ void AssetLoader::workerLoop()
         uint8_t* buffer = static_cast<uint8_t*>(std::malloc(static_cast<size_t>(total)));
         if (!buffer)
         {
+            assert(false);
             std::fclose(file);
             pushLoadEvent(LoadResult{ url, nullptr, 0, 3 });
             continue;
@@ -399,13 +403,17 @@ void AssetLoader::drainEvents()
 
 bool AssetLoader::isLoaded(LPCTSTR lpszURI) 
 {
-    auto it = _cache.find(lpszURI);
+    std::string s;
+    auto sPath = std::format("{}/{}", Engine::getCfg().RES_DIR, lpszURI);
+    auto it = _cache.find(sPath.c_str());
     return (it != _cache.end() && it->second->loaded);
 }
 
 void* AssetLoader::getLoadedFile(LPCTSTR lpszURI, int& nOutSize) 
 {
-    auto it = _cache.find(lpszURI);
+    std::string s;
+    auto sPath = std::format("{}/{}", Engine::getCfg().RES_DIR, lpszURI);
+    auto it = _cache.find(sPath.c_str());
     if (it != _cache.end() && it->second->loaded) 
     {
         nOutSize = (int)it->second->data.size();
@@ -418,7 +426,8 @@ void* AssetLoader::getLoadedFile(LPCTSTR lpszURI, int& nOutSize)
 std::string AssetLoader::getLoadedFileStr(LPCTSTR lpszURI)
 {
     std::string s;
-    auto it = _cache.find(lpszURI);
+    auto sPath = std::format("{}/{}", Engine::getCfg().RES_DIR, lpszURI);
+    auto it = _cache.find(sPath.c_str());
     assert(it != _cache.end());
     if (it != _cache.end() && it->second->loaded) 
     {

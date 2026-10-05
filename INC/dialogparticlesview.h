@@ -136,7 +136,7 @@ public:
         _ptrButtonsCont->addChild(_ptrHintLabel);
         _ptrButtonsCont->alignChildren(eChildrenAlign::HORIZONTAL, 20.f, getDialogCx());
         _ptrButtonsCont->setY(getDialogCy() - _ptrButtonsCont->calcNotTransCy());
-        auto ptrBg = CGfx::getInstance()->spriteFromTexture("BBB/shiz_bg.png");
+        auto ptrBg = CGfx::getInstance()->spriteFromTexture("shiz_bg.png");
         _root->addChild(ptrBg);
         _root->addChild(_ptrParticles);
         ptrBg->setPosCentered(getDialogCx(), getDialogCy());

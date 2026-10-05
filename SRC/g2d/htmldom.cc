@@ -4704,6 +4704,8 @@ void HTMLDom::refreshNode(HTMLDomNode& node)
 void HTMLDom::parseCSSFromFile(const char* lpszCSSFileName)
 {
 
+    auto s = std::filesystem::current_path();
+
     std::string out;
     FILE* f = std::fopen(lpszCSSFileName, "rb");
     if (std::fseek(f, 0, SEEK_END) == 0)

@@ -476,7 +476,8 @@ public:
                                                                          void*                      pData2 = nullptr, 
                                                                          void*                      pData3 = nullptr) override;
     float                           getLastDt                           (void) { return _lastDt; }
-    CTexturePtr                     getTextureById                      (LPCTSTR                    lpszTexId);
+    CTexturePtr                     getTextureById                      (LPCTSTR                    lpszTexId,
+                                                                         bool                       bFullPath = false);
     void                            setOnRenderEnded                    (SimpleCallback cb) { assert(!_cbOnRenderEnded); _cbOnRenderEnded = cb; }
 
     CSpritePtr                      spriteFromTexture                   (LPCTSTR                    lpszTexName);
@@ -611,7 +612,8 @@ public:
     CTexturePtr                     uploadAsset                         (LPCTSTR                    lpszFileName, 
                                                                          const uint8_t*             pBytes, 
                                                                          size_t                     nSize);
-    CTexturePtr                     uploadAsset                         (LPCTSTR                    lpszTexId);
+    CTexturePtr                     uploadAsset                         (LPCTSTR                    lpszTexId,
+                                                                         bool                       bFullPath = false);
     void                            uploadGrainTexture                  (void);
     void                            uploadAssets                        (LPCTSTR                    lpszTexId, 
                                                                          int                        numOfPngs = 1);

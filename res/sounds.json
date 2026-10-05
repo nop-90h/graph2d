@@ -1,0 +1,22 @@
+{
+  "resources": [
+    "BBB/sounds.mp3"
+  ],
+  "spritemap": {
+    "buff": {
+      "start": 0,
+      "end": 4.536009070294784,
+      "loop": false
+    },
+    "buff2": {
+      "start": 6,
+      "end": 7.968004535147392,
+      "loop": false
+    },
+    "buff3": {
+      "start": 9,
+      "end": 10.344013605442177,
+      "loop": false
+    }
+  }
+}

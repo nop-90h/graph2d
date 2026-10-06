@@ -1,6 +1,6 @@
 {
   "resources": [
-    "chars/sprite_name.mp3"
+    "sprite_name.mp3"
   ],
   "spritemap": {
     "angel_hit": {

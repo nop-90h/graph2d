@@ -1,6 +1,6 @@
 {
   "resources": [
-    "BBB/sounds.mp3"
+    "sounds.mp3"
   ],
   "spritemap": {
     "buff": {

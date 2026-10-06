@@ -73,14 +73,15 @@ function onReady()
 window.setTimeout(onReady, 1000);
 </script>
 
-<script src="detect-gpu.umd.js"></script>
+<!--<script src="detect-gpu.umd.js"></script> -->
 
   <script type="text/javascript">
     var Module = {
 		noInitialRun: true, // Стопаем авто-вызов main()
 		onRuntimeInitialized: async function() {
 		  // Ждем, пока железо определится
-		  const gpuData = await DetectGPU.getGPUTier();
+		  //const gpuData = await DetectGPU.getGPUTier();
+		  const gpuData = 3;
 		  window.GPU_TIER = gpuData.tier;
 
 		  // Теперь, когда мы знаем, что ГПУ — "тыква",

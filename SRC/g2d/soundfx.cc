@@ -4,6 +4,7 @@
 #include <iostream>
 #include "jsondec.h"
 #include "audiomanager.h"
+#include "engine.h"
 
 _G2D_NAMESPACE_BEGIN_
 
@@ -246,7 +247,7 @@ int SoundFXPlayer::loadSprite(
 )
 {
     std::string nameStr(name ? name : "");
-    std::string urlStr(url ? url : "");
+    std::string urlStr = std::format("{}/{}", Engine::getCfg().RES_DIR, url);
 
     if (nameStr.empty())
     {
@@ -405,7 +406,7 @@ bool SoundFXPlayer::loadSpriteMetadata(
     }
 
     CJson* resources = CJson::getItem(&json, "resources");
-    std::string audioUrl = url ? url : "";
+    std::string audioUrl = url;
 
     if (resources && resources->_child && resources->_child->_valueString)
     {
@@ -451,7 +452,7 @@ bool SoundFXPlayer::loadSpriteMetadata(
 int SoundFXPlayer::loadSound(const char* name, const char* url)
 {
     std::string nameStr(name ? name : "");
-    std::string urlStr(url ? url : "");
+    std::string urlStr = std::format("{}/{}", Engine::getCfg().RES_DIR, url);
 
     if (nameStr.empty())
     {
@@ -484,7 +485,8 @@ void SoundFXPlayer::loadSoundAsync(
 )
 {
     std::string nameStr(name ? name : "");
-    std::string urlStr(url ? url : "");
+    std::string urlStr = std::format("{}/{}", Engine::getCfg().RES_DIR, url);
+    url = urlStr.c_str();
 
     if (nameStr.empty() || urlStr.empty())
     {
